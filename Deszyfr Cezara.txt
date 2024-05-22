@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+string decezar(string w,int k){
+string szyfr="";
+k=k%26;
+for(int i = 0 ; i < w.length();i++){
+        if(w[i]-k<97){
+        szyfr+=w[i]-k+26;
+        }
+        else{
+            szyfr+=w[i]-k;
+        }
+
+        }
+        return szyfr;
+}
+int main()
+{
+   cout << decezar("cnc",2);
+
+    return 0;
+}

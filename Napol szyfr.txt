@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+string szyfrowanie(string w)
+{
+    string a="";
+    string b="";
+    string c="";
+    for(int i=0;i<w.length();i++)
+    {
+        if(i<w.length()/2)
+        {
+             a+=w[i];
+        }
+        else if(i>=w.length()/2)
+        {
+             b+=w[i];
+        }
+    }
+    c=b+a;
+    return c;
+}
+int main()
+{
+    cout<< szyfrowanie("monitor");
+    return 0;
+}

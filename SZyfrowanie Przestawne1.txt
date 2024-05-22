@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+string szyfr2(string s,int k){
+    string wyraz = "";
+    int j = 0;
+    while(wyraz.length()!=s.length()){
+    for(int i = j; i < s.length();i+=k){
+
+        wyraz+=s[i];
+
+    }
+
+    j++;
+}
+return wyraz;
+}
+
+int main()
+{
+   cout << szyfr2("matura",2);
+
+    return 0;
+}
